@@ -1,0 +1,11 @@
+* Basic C++
+* C++ Containers: Vector, Map, Stack, Queue, Set (client use, not implementation)
+* Recursion
+* Midterm goes up to this point
+* Computer Memory
+** Arrays
+** pointers/addresses
+** dynamic memory allocation
+* Container Implementations, Customer Data Structures
+* Graphs
+* Inheritance
