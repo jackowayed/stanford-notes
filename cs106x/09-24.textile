@@ -1,0 +1,29 @@
+h1. Containers
+
+|_.Java|_.C++|
+|ArrayList|Vector|
+|HashMap|Map|
+|Stack|Stack|
+|Queue|Queue|
+|Set|Set|
+
+class Stack{
+public:
+Stack();
+~Stack(); //destructor
+
+bool isEmpty(); // O(1)
+int size(); // O(1)
+void push(T elem); // O(1)
+T pop(); // O(1)
+
+private:
+We're happily clueless :)
+}
+
+Next time: RPN calculator (single-digit only)
+
+(7+7)* 8 -> 77+8*
+7+7* 8 -> 778*+
+
+we'll make "478+-993**7--" work w/ stack
