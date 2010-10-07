@@ -123,6 +123,6 @@ When Buddhists die, they generally are burned, but if they really are detached f
 
 ---
 
-Insistence on originality is interesting, as if innovationa and originality are a substitute for wisdom.
+Insistence on originality is interesting, as if innovation and originality are a substitute for wisdom.
 
 "The reward of a good life is the good life."

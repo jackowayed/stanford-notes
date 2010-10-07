@@ -83,10 +83,55 @@ void DrawCoastline(double length, double theta, int order){
 
 // permutations of a string
 
-void ListSubsets(string set){
-  ListSubsets(set, " ");
+void Permutations(string str){
+  Permutations("", str);
 }
 
-void ListSubsets(string rest, string fixed){
-
+void Permutations(string fixedPrefix, string remaining){
+  if (remaining.empty()){
+	cout << fixedPrefix << endl;
+	return; //unnecessary
+  }
+  for (int i = 0; i < remaining.size(); i++){
+	Permutatoins(fixedPrefix + remaining[i],
+				 remaining.substr(0, i)
+				 + remaining.substr(i+1));
+  }
 }
+
+// "subsets" or "powerset" of string
+// eg for "ABC", subsets are
+// "",   "B", "C", "BC" //these are also subsets of BC
+// "A", "AB" "AC" "ABC" //these are A appended to the above
+void Powerset(string set){
+  Powerset("", set);
+}
+
+void Powerset(string sofar, string rest){
+  if (rest.empty()){
+	cout << sofar << endl;
+	return;
+  }
+  Powerset(sofar + rest[0], rest.substr(1));
+  Powerset(sofar, rest.substr(1));
+}
+
+
+// Tower of Hanoi
+// just prints out instructions on how to do it
+
+void MoveSingleDisk(char start, char dest){
+  cout << start << "----->" << dest << endl;
+}
+
+void MoveTower(int n, char start, char dest, char temp){
+  if (n > 0){
+	// get everything but the bottom ring out of the way
+	MoveTower(n-1, start, temp, dest);
+	// move the bottom ring
+	MoveSingleDisk(start, dest);
+	// move the rest of the tower back on
+	MoveTower(n-1, temp, dest, start);
+  }
+}
+// O(2^n)
