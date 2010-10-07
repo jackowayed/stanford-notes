@@ -124,6 +124,7 @@ void MoveSingleDisk(char start, char dest){
   cout << start << "----->" << dest << endl;
 }
 
+// O(2^n)
 void MoveTower(int n, char start, char dest, char temp){
   if (n > 0){
 	// get everything but the bottom ring out of the way
@@ -134,4 +135,3 @@ void MoveTower(int n, char start, char dest, char temp){
 	MoveTower(n-1, temp, dest, start);
   }
 }
-// O(2^n)
