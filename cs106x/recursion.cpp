@@ -135,3 +135,68 @@ void MoveTower(int n, char start, char dest, char temp){
 	MoveTower(n-1, temp, dest, start);
   }
 }
+
+// generate all words spellable with periodic table abbrevs
+void GenerateWords(Set<string> & symbols, Lexicon & english){
+  GenerateWords("", symbols, english);
+}
+
+void GenerateWords(string prefix, Set<string> & symbols, Lexicon & english){
+  if (!english.containsPrefix(prefix)) return;
+  if (english.containsWord(prefix))  cout << prefix << endl;
+  foreach (string symbol in symbols){
+	GenerateWords(prefix + symbol, symbols, english);
+  }
+}
+
+// check if word can be formed from periodic table elements
+bool CanFormWord(string word, Set<string> & symbols){
+  if (word.empty()) return true;
+  for (int i = 0; i <= min(3, word.size()); i++){
+	string symbol = word.substr(0, i);
+	string remaining = word.subtr(i);
+	if (symbols.contains(symbol) && CanFormWord(remaining, symbols)) return true;
+  }
+  return false;
+}
+
+// shrinkable words
+// words where you take out one letter at time, with it staying a word each time
+// eg stink
+//    sink
+//    sin
+//    in
+//    i
+//
+// single letters are always ok because Jerry says so
+bool CanShrink(string word, Lexicon & lexicon){
+  if (word.empty()) return true;
+  if (!lexicon.containsWord(word)) return false;
+  for (int i = 0; i < word.size(); i++){
+	if (CanShrink(word.substr(0, i) + word.substr(i+1), lexicon)) return true;
+  }
+  return false;
+}
+
+// rewrite
+bool Can(string word, Lexicon & lexicon, Stack<string> & path){
+  if (word.empty()){
+	path.push(word);
+	return true;
+  }
+  if (!lex.containsWord(word)) return false;
+  for (int i = 0; i < word.size(); i++){
+	string candidate = word.substr(0, i) + word.substr(i+1);
+	if (Can(candidate, lex, path)){
+	  path.push(word);
+	  return true;
+	}
+  }
+  return false;
+}
+
+// n queens
+bool Solve(Grid<bool> & board){
+  return Solve(board, 0);
+}
+// see handout
