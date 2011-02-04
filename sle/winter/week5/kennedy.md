@@ -93,31 +93,27 @@ Letters to him about his editorial attacked the rich, the securely employed, the
 
 His summary on ROTC: Keeping them away means we have minimal impact on the leaders of the military, which is a very important organization in society with a lot of impact on the world.
 
----
+## Questions
 
-Questions:
-
-## Military Contractors
+### Military Contractors
 
 Had about as many contractors in Iraq as soldiers at height of the war. ~30k licensed to use force
 
 Having people who are licensed to use military force but not subject to normal chain command is asking for trouble.
 
-## Why can't Congress use power of the purse to curtail use of the military?
+### Why can't Congress use power of the purse to curtail use of the military?
 
 Very hard to be seen as obstructing the military after the troops have been deployed. "Support our troops" == "support my war"
 
-## Question about military spending norms (ie not during WWII)
+### Question about military spending norms (ie not during WWII)
 
 During Cold War we spent ~10% of GDP on military
 
 (Doesn't really seem like a problem to me to go from 10% to 5%, and 5% is still a lot, especially since our economy has grown so much)
 
-## ?
+### ?
 
 Called the president being able to deploy without much risk of repurcussions of a moral hazard.
-
----
 
 ## Final Story
 
